@@ -1,0 +1,15 @@
+﻿<Window x:Class="DragHandlerSample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:dd="urn:gong-wpf-dragdrop"
+        xmlns:local="clr-namespace:DragHandlerSample"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <Label Width="100" Height="50" BorderThickness="1" BorderBrush="Black" dd:DragDrop.IsDragSource="True" dd:DragDrop.DragHandler="{Binding CustomTextDragSource}">Text drag #1</Label>
+        <Label Width="100" Height="50" BorderThickness="1" BorderBrush="Black" dd:DragDrop.IsDragSource="True" dd:DragDrop.DragHandler="{Binding CustomTextDragSource}">Text drag #2</Label>
+        <Label Width="100" Height="50" BorderThickness="1" BorderBrush="Black" dd:DragDrop.IsDragSource="True" dd:DragDrop.DragHandler="{Binding CustomFileDragSource}">TextFile.txt</Label>
+    </StackPanel>
+</Window>
